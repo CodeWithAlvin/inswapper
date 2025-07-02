@@ -68,6 +68,26 @@ python swapper.py \
 ```
 You will obtain the exact result as above.
 
+Video Processing
+Process entire videos with face swapping using the video processing module.
+```bash
+python video.py \
+--source_img="./data/man1.jpeg;./data/man2.jpeg" \
+--target_video="./data/input_video.mp4" \
+--output_video="./output/result_video.mp4" \
+--source_indexes="-1" \
+--target_indexes="-1" \
+--face_restore \
+--background_enhance \
+--face_upsample \
+--upscale=2 \
+--codeformer_fidelity=0.5
+```
+Launch GUI
+```bash
+python gui.py
+```
+
 ## Acknowledgement
 This project is inspired by [inswapper](https://huggingface.co/deepinsight/inswapper/tree/main), thanks [insightface.ai](https://insightface.ai/) for releasing their powerful face swap model that makes this happen. Our codebase is built on the top of [sd-webui-roop](https://github.com/s0md3v/sd-webui-roop) and [CodeFormer](https://huggingface.co/spaces/sczhou/CodeFormer).
 
